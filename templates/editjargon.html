@@ -74,22 +74,21 @@
                             </div>
                         </div>
                         <div class="row">
-                            <button class="btn waves-effect waves-light deep-purple darken-4" style="color: #fff59d;"
-                                type="submit" name="action">Update jargon
-                                <i class="material-icons right" style="color: #fff59d;">playlist_add</i>
-                            </button>
-                        </div>
-                        <div class="row">
-                            <a href="{{url_for('delete_jargon', jargon_id=jargon._id)}}"
-                                class="waves-effect waves-light btn deep-purple darken-4" style="color: #fff59d;">
-                                <i class="material-icons right" style="color: #fff59d;">delete</i>Delete
-                            </a>
-                        </div>
-                        <div class="row">
-                            <a href="{{ url_for('browse_jargon') }}"
-                                class="waves-effect waves-light btn deep-purple darken-4" style="color: #fff59d;">
-                                <i class="material-icons right" style="color: #fff59d;">cancel</i>Cancel
-                            </a>
+                            <div class="col s12 m12 l4 xl4">
+                                <button class="btn waves-effect waves-light deep-purple darken-4" style="color: #fff59d;" type="submit" name="action">Update jargon
+                                    <i class="material-icons right" style="color: #fff59d;">playlist_add</i>
+                                </button>
+                            </div>
+                            <div class="col s12 m12 l4 xl4">
+                                <a href="{{url_for('delete_jargon', jargon_id=jargon._id)}}" class="waves-effect waves-light btn deep-purple darken-4" style="color: #fff59d;">
+                                    <i class="material-icons right" style="color: #fff59d;">delete</i>Delete
+                                </a>
+                            </div>
+                            <div class="col s12 m12 l4 xl4">
+                                <a href="{{ url_for('browse_jargon') }}" class="waves-effect waves-light btn deep-purple darken-4" style="color: #fff59d;">
+                                    <i class="material-icons right" style="color: #fff59d;">cancel</i>Cancel
+                                </a>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
