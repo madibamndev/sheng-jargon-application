@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'sheng_jargon'
-app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://mwemn:3KUhJ0FfRqLgItES@myfirstcluster.cnxjr.mongodb.net/sheng_jargon?retryWrites=true&w=majority')
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://mwemn:cl%40bM%40w!ngU@myfirstcluster.cnxjr.mongodb.net/sheng_jargon?retryWrites=true&w=majority')
 mongo = PyMongo(app)
 
 
@@ -130,6 +130,14 @@ def contact():
     messages = mongo.db.messages.find()
     return render_template('contact.html',
         messages=messages)
+
+
+@app.route('/submitting_message', methods=['POST'])
+def submitting_message():
+    messages =  mongo.db.messages
+    messages.insert_one(request.form.to_dict())
+    return redirect(url_for('contact',
+        messages=messages))
 
 
 if __name__ == '__main__':
