@@ -26,18 +26,18 @@
                             <legend>Contact Information</legend>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input id="first_name" type="text" class="validate">
+                                    <input id="first_name" name="first_name" type="text" class="validate">
                                     <label for="first_name">First Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="last_name" type="text" class="validate">
+                                    <input id="last_name" name="last_name" type="text" class="validate">
                                     <label for="last_name">Last Name</label>
                                 </div>
                                 <br>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="email" type="email" class="validate">
+                                    <input id="email" name="email" type="email" class="validate">
                                     <label for="email">Email</label>
                                     <span class="helper-text" data-error="wrong" data-success="right">
                                         We'll never share your email with anyone else.</span>
@@ -45,8 +45,10 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea id="input-your-message" class="materialize-textarea" data-length="120"></textarea>
+                                    <textarea id="input-your-message" name="input_your_message" class="materialize-textarea" data-length="120"></textarea>
                                     <label for="textarea2">Message</label>
+                                    <span class="helper-text" data-error="wrong" data-success="right">Messages can not be unsent once submitted, therefore <strong>observe clarity</strong>
+                                        in your message before clicking Submit.</span>
                                 </div>
                             </div>
                             <button class="btn waves-effect waves-light deep-purple darken-4" style="color: #fff59d;" type="submit" name="action">Submit
